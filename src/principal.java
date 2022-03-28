@@ -30,7 +30,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
 
         //icono
         setTitle("Pantalla Principal");
-        ImageIcon imagen = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\icon.png");
+        ImageIcon imagen = new ImageIcon(".\\src\\images\\icon.png");
         setIconImage(imagen.getImage());
 
         //recuperar nombre
@@ -80,7 +80,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         creador.addActionListener(this);
 
         //labels
-        ImageIcon imagen2 = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\historia1.png");
+        ImageIcon imagen2 = new ImageIcon(".\\src\\images\\historia1.png");
         e1 = new JLabel(imagen2);
         e1.setBounds(20,20,300,150);
         add(e1);
@@ -220,18 +220,18 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                 if (Dep.equals("Atención al Cliente")){
 
                     if (Anos.equals("1 año de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 6 días de vacaciones.\n");
 
                     }if (Anos.equals("2 a 6 Anos de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
                                 " y que tiene una antigüedad de entre 2 y 6 Anos\n" +
                                 " le corresponden 14 días de vacaciones.\n");
                     }if (Anos.equals("7 Anos o más de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
                                 " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 20 días de vacaciones.\n");
@@ -240,17 +240,17 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                 }if (Dep.equals("Departamento de Logística")){
 
                     if (Anos.equals("1 año de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 7 días de vacaciones.\n");
                     }if (Anos.equals("2 a 6 Anos de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
                                 " y que tiene una antigüedad de entre 2 y 6 Anos\n" +
                                 " le corresponden 15 días de vacaciones.\n");
                     }if (Anos.equals("7 Anos o más de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
                                 " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 22 días de vacaciones.\n");
@@ -259,17 +259,17 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                 }if (Dep.equals("Departamento de Gerencia")){
 
                     if (Anos.equals("1 año de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 10 días de vacaciones.\n");
                     }if (Anos.equals("2 a 6 Anos de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
                                 " y que tiene una antigüedad de entre 2 y 6 Anos\n" +
                                 " le corresponden 20 días de vacaciones.\n");
                     }if (Anos.equals("7 Anos o más de servicio")){
-                        area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
+                        area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
                                 " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 30 días de vacaciones.\n");

@@ -68,12 +68,16 @@ public class Bienvenida extends JFrame implements ActionListener {
     //IMPLEMENTAMOS LA ACCIÓN
     public void actionPerformed (ActionEvent e){
         if (e.getSource() == boton1){
-            //obtener nombre y corregir el formate del nombre
+            //obtener nombre y corregir el formato del nombre
             nombreUsu = field1.getText().trim();
-            nombreDef = nombreUsu.substring(0,1).toUpperCase(Locale.ROOT) + nombreUsu.substring(1).toLowerCase(Locale.ROOT);
-            if (nombreUsu.equals("")){
+
+            if (nombreUsu.isEmpty()){
                 JOptionPane.showMessageDialog(null,"Debes ingresar tu nombre");
             }else{
+
+                nombreDef =
+                        nombreUsu.substring(0,1).toUpperCase(Locale.ROOT) + nombreUsu.substring(1).toLowerCase(Locale.ROOT);
+
                 condiciones ventanaCondiciones = new condiciones();
                 ventanaCondiciones.setLayout(null);
                 ventanaCondiciones.setBounds(0,0,600,360);

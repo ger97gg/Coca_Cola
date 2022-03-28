@@ -26,7 +26,7 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
 
         //tit-pantalla
         setTitle("Licencia de uso");
-        ImageIcon imagen = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\icon.png");
+        ImageIcon imagen = new ImageIcon(".\\src\\images\\icon.png");
         setIconImage(imagen.getImage());
 
         //Label del título
@@ -95,7 +95,7 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
         boton2.addActionListener(this);
 
         //label 2
-        ImageIcon imagen2 = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\coca-cola.png");
+        ImageIcon imagen2 = new ImageIcon(".\\src\\images\\coca-cola.png");
         etiqueta2 = new JLabel(imagen2);
         etiqueta2.setBounds(250,190,350,150);
         add(etiqueta2);
