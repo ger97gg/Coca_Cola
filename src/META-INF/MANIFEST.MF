@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
 Main-Class: Bienvenida
+Created-By: German Gamarra / german199752@gmail.com
 

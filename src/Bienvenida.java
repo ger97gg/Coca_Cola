@@ -3,9 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
+/*Created by: German Gamarra
+              german199752@gmail.com*/
 
 public class Bienvenida extends JFrame implements ActionListener {
-
+    //Es la primera Pantalla: su funcionalidad es el login. Necesitas ingresar un nombre para pasar a la segunda
+    //pantalla, este nombre es recogido y se mostrara en la segunda y tercera pantalla.
     private JLabel titulo, subtitulo, etiqueta1, etiqueta2;
     private JTextField field1;
     private JButton boton1;
@@ -68,16 +71,13 @@ public class Bienvenida extends JFrame implements ActionListener {
     //IMPLEMENTAMOS LA ACCIÓN
     public void actionPerformed (ActionEvent e){
         if (e.getSource() == boton1){
-            //obtener nombre y corregir el formato del nombre
             nombreUsu = field1.getText().trim();
-
             if (nombreUsu.isEmpty()){
                 JOptionPane.showMessageDialog(null,"Debes ingresar tu nombre");
             }else{
-
-                nombreDef =
-                        nombreUsu.substring(0,1).toUpperCase(Locale.ROOT) + nombreUsu.substring(1).toLowerCase(Locale.ROOT);
-
+                //Corregir el formato del nombre introducido
+                //Quedara en el formato: "German", "Lisa"...etc
+                nombreDef = nombreUsu.substring(0,1).toUpperCase(Locale.ROOT) + nombreUsu.substring(1).toLowerCase(Locale.ROOT);
                 condiciones ventanaCondiciones = new condiciones();
                 ventanaCondiciones.setLayout(null);
                 ventanaCondiciones.setBounds(0,0,600,360);
@@ -91,7 +91,7 @@ public class Bienvenida extends JFrame implements ActionListener {
         }
     }
     public static void main(String[] args) {
-        //Pantalla del main
+        //Pantalla
         Bienvenida pantalla = new Bienvenida();
         pantalla.setLayout(null);
         pantalla.setBounds(0,0,350,450);

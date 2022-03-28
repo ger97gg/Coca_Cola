@@ -4,16 +4,18 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+/*Created by: German Gamarra
+              german199752@gmail.com*/
 
 public class condiciones extends JFrame implements ActionListener, ChangeListener {
-
+    //Segunda pantalla: su funcion es la de solo permitir el acceso, en caso de aceptar los terminos y condiciones
+    //de otra forma, se te redirige a la pantalla de Bienvenida
     private JLabel etiqueta1, etiqueta2;
     private JButton boton1, boton2;
     private JCheckBox check1;
     private JTextArea area1;
     private JScrollPane scrol1;
     String nombre ="";
-
 
     public condiciones() {
         //pantalla principal
@@ -38,8 +40,6 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
 
         //Texto Área
         area1 = new JTextArea();//el area
-
-
         area1.setText( "    TÉRMINOS Y CONDICIONES"+ "\n\n" +
                 "    A.PROHIBIDA SU VENTA O DISTRIBUCIÓN SIN AUTORIZACIÓN DE ESTE PROYECTO.\n" +
                 "    B.PROHIBIDA LA ALTERACIÓN DEL CÓDIGO FUENTE.\n" +
@@ -63,23 +63,20 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
 
         area1.setFont(new Font("ArialBlack",1,12));
         area1.setForeground(new Color(0,0,0));
-        scrol1 = new JScrollPane(area1);//introducimos el área en el scroll pane
-        scrol1.setBounds(20,60,540,150);//set del cuadro
-        add(scrol1);//lo añadimos en el scroll
-        area1.setEditable(false);//no pueden editar el texto
-
+        scrol1 = new JScrollPane(area1);
+        scrol1.setBounds(20,60,540,150);
+        add(scrol1);
+        area1.setEditable(false);
 
         //Recuperar Proyecto
         Bienvenida texto = new Bienvenida();
         nombre = texto.nombreDef;
-
         //checkbox
         check1 = new JCheckBox(" Yo " + nombre+ " Acepto");
         check1.setBounds(20,230,150,30);
         check1.setFont(new Font("Helvetic",1,13));
         check1.addChangeListener(this);
         add(check1);
-
         //botones
         boton1 = new JButton("Continuar");
         boton1.setBounds(20,270,100,30);
@@ -102,7 +99,6 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
 
         setVisible(true);
     }
-
     public void stateChanged (ChangeEvent e) {
         if (check1.isSelected()){
             boton1.setEnabled(true);
@@ -112,7 +108,6 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
             boton2.setEnabled(true);
         }
     }
-
     public void actionPerformed (ActionEvent e) {
         if (e.getSource() == boton1){
             this.setVisible(false);
@@ -124,7 +119,6 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
             principal.setLocationRelativeTo(null);
             principal.setDefaultCloseOperation(EXIT_ON_CLOSE);
             principal.setVisible(true);
-
         }if (e.getSource() == boton2){
             Bienvenida atras = new Bienvenida();
             atras.setLayout(null);
@@ -137,7 +131,6 @@ public class condiciones extends JFrame implements ActionListener, ChangeListene
             this.setVisible(false);
         }
     }
-
     public static void main(String[] args) {
         new condiciones();
     }

@@ -2,12 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.util.Locale;
+/*Created by: German Gamarra
+              german199752@gmail.com*/
 
-public class principal extends JFrame implements ActionListener, ItemListener {
-
+public class principal extends JFrame implements ActionListener {
+    //pantalla principal, continen la funcion principal: calcular los dias de vacaciones desde el menu (vacaciones)
+    //contiene opciones graficas: cambiar el color del fondo, dar informacion del creador, resetear los inputs y
+    //deslogearse
     private JMenuBar menu;
     private JMenu opcion, fondo, calcular, acerca;
     private JMenuItem rojo, negro, morado, nuevo, salir, vacaciones, creador;
@@ -71,7 +73,6 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         calcular.add(vacaciones);
         vacaciones.addActionListener(this);
 
-
         acerca = new JMenu("Acerca de");
         acerca.setForeground(Color.WHITE);
         menu.add(acerca);
@@ -106,7 +107,6 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         text1 = new JTextField();
         text1.setBounds(20,270,150,20);
         text1.setFont(new Font("Arial", 1, 12));
-        //text1.setBackground(Color.lightGray);
         add(text1);
 
         //Apellido Paterno
@@ -118,7 +118,6 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         text2 = new JTextField();
         text2.setBounds(20,320,150,20);
         text2.setFont(new Font("Arial", 1, 12));
-        //text2.setBackground(Color.lightGray);
         add(text2);
 
         //Apellido Materno
@@ -130,10 +129,9 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         text3 = new JTextField();
         text3.setBounds(20,370,150,20);
         text3.setFont(new Font("Arial", 1, 12));
-        //text3.setBackground(Color.lightGray);
         add(text3);
 
-        //Depertamento
+        //Departamento
         e7 = new JLabel("Selecciona el Departamento: ");
         e7.setBounds(250, 240, 180,30);
         e7.setForeground(Color.WHITE);
@@ -141,13 +139,11 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         add(e7);
         combo1 = new JComboBox<>();
         combo1.setBounds(250, 270, 200,20);
-        //combo1.setBackground(Color.lightGray);
         add(combo1);
         combo1.addItem("");
         combo1.addItem("Atención al Cliente");
         combo1.addItem("Departamento de Logística");
         combo1.addItem("Departamento de Gerencia");
-
 
         //Antiguedad
         e8 = new JLabel("Selecciona la Antigüedad: ");
@@ -157,7 +153,6 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         add(e8);
         combo2 = new JComboBox<>();
         combo2.setBounds(250, 320, 200,20);
-        //combo2.setBackground(Color.lightGray);
         add(combo2);
         combo2.addItem("");
         combo2.addItem("1 año de servicio");
@@ -175,9 +170,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         area1.setEditable(false);
         scrol1.setBounds(250,370,300,50);
         area1.setFont(new Font("Arial", 1, 10));
-        //area1.setBackground(Color.lightGray);
         add(scrol1);
-
 
         //Copyright
         e10 = new JLabel("© 2017 The Coca-Cola Company");
@@ -188,11 +181,6 @@ public class principal extends JFrame implements ActionListener, ItemListener {
 
         setVisible(true);
     }
-
-    public void itemStateChanged (ItemEvent e){
-
-    }
-
     public void actionPerformed (ActionEvent e){
         if (e.getSource() == rojo){
             getContentPane().setBackground(Color.RED);
@@ -218,13 +206,11 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                 JOptionPane.showMessageDialog(null,"¡Debes rellenar todos los campos!");
             }else {
                 if (Dep.equals("Atención al Cliente")){
-
                     if (Anos.equals("1 año de servicio")){
                         area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 6 días de vacaciones.\n");
-
                     }if (Anos.equals("2 a 6 Anos de servicio")){
                         area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
@@ -236,9 +222,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                                 " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 20 días de vacaciones.\n");
                     }
-
                 }if (Dep.equals("Departamento de Logística")){
-
                     if (Anos.equals("1 año de servicio")){
                         area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
@@ -255,9 +239,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                                 " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 22 días de vacaciones.\n");
                     }
-
                 }if (Dep.equals("Departamento de Gerencia")){
-
                     if (Anos.equals("1 año de servicio")){
                         area1.setText(" Al empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
@@ -274,10 +256,8 @@ public class principal extends JFrame implements ActionListener, ItemListener {
                                 " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 30 días de vacaciones.\n");
                     }
-
                 }
             }
-
         }if (e.getSource() == creador){
             JOptionPane.showMessageDialog(null,"Desarrollado por: Germán Gamarra como proyecto final del curso Java " +
                     "para principiantes 2022\n" + "german199752@gmail.com");
@@ -293,7 +273,6 @@ public class principal extends JFrame implements ActionListener, ItemListener {
             inicio.setVisible(true);
         }
     }
-
     public static void main(String[] args) {
         new principal();
     }
