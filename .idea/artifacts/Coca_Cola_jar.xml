@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Coca_Cola:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Coca_Cola_jar</output-path>
+    <root id="archive" name="Coca_Cola.jar">
+      <element id="module-output" name="Coca_Cola" />
+    </root>
+  </artifact>
+</component>
