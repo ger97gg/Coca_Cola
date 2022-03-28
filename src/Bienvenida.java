@@ -71,7 +71,6 @@ public class Bienvenida extends JFrame implements ActionListener {
             //obtener nombre y corregir el formate del nombre
             nombreUsu = field1.getText().trim();
             nombreDef = nombreUsu.substring(0,1).toUpperCase(Locale.ROOT) + nombreUsu.substring(1).toLowerCase(Locale.ROOT);
-
             if (nombreUsu.equals("")){
                 JOptionPane.showMessageDialog(null,"Debes ingresar tu nombre");
             }else{

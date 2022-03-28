@@ -161,8 +161,8 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         add(combo2);
         combo2.addItem("");
         combo2.addItem("1 año de servicio");
-        combo2.addItem("2 a 6 años de servicio");
-        combo2.addItem("7 años o más de servicio");
+        combo2.addItem("2 a 6 Anos de servicio");
+        combo2.addItem("7 Anos o más de servicio");
 
         //calculo
         e9 = new JLabel("Resultado del Cálculo: ");
@@ -212,66 +212,66 @@ public class principal extends JFrame implements ActionListener, ItemListener {
             String AP = text2.getText().toUpperCase(Locale.ROOT);
             String AM = text3.getText().toUpperCase(Locale.ROOT);
             String Dep = combo1.getSelectedItem().toString();
-            String Años = combo2.getSelectedItem().toString();
+            String Anos = combo2.getSelectedItem().toString();
 
-            if (NC.equals("") || AP.equals("") || AM.equals("") || Dep.equals("") || Años.equals("")){
+            if (NC.equals("") || AP.equals("") || AM.equals("") || Dep.equals("") || Anos.equals("")){
                 JOptionPane.showMessageDialog(null,"¡Debes rellenar todos los campos!");
             }else {
                 if (Dep.equals("Atención al Cliente")){
 
-                    if (Años.equals("1 año de servicio")){
+                    if (Anos.equals("1 año de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 6 días de vacaciones.\n");
 
-                    }if (Años.equals("2 a 6 años de servicio")){
+                    }if (Anos.equals("2 a 6 Anos de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
-                                " y que tiene una antigüedad de entre 2 y 6 años\n" +
+                                " y que tiene una antigüedad de entre 2 y 6 Anos\n" +
                                 " le corresponden 14 días de vacaciones.\n");
-                    }if (Años.equals("7 años o más de servicio")){
+                    }if (Anos.equals("7 Anos o más de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el sector de Atención al Cliente\n" +
-                                " y que tiene una antigüedad de 7 años o más\n" +
+                                " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 20 días de vacaciones.\n");
                     }
 
                 }if (Dep.equals("Departamento de Logística")){
 
-                    if (Años.equals("1 año de servicio")){
+                    if (Anos.equals("1 año de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 7 días de vacaciones.\n");
-                    }if (Años.equals("2 a 6 años de servicio")){
+                    }if (Anos.equals("2 a 6 Anos de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
-                                " y que tiene una antigüedad de entre 2 y 6 años\n" +
+                                " y que tiene una antigüedad de entre 2 y 6 Anos\n" +
                                 " le corresponden 15 días de vacaciones.\n");
-                    }if (Años.equals("7 años o más de servicio")){
+                    }if (Anos.equals("7 Anos o más de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Logística\n" +
-                                " y que tiene una antigüedad de 7 años o más\n" +
+                                " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 22 días de vacaciones.\n");
                     }
 
                 }if (Dep.equals("Departamento de Gerencia")){
 
-                    if (Años.equals("1 año de servicio")){
+                    if (Anos.equals("1 año de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
                                 " y que tiene una antigüedad de un 1 año\n" +
                                 " le corresponden 10 días de vacaciones.\n");
-                    }if (Años.equals("2 a 6 años de servicio")){
+                    }if (Anos.equals("2 a 6 Anos de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
-                                " y que tiene una antigüedad de entre 2 y 6 años\n" +
+                                " y que tiene una antigüedad de entre 2 y 6 Anos\n" +
                                 " le corresponden 20 días de vacaciones.\n");
-                    }if (Años.equals("7 años o más de servicio")){
+                    }if (Anos.equals("7 Anos o más de servicio")){
                         area1.setText(" \nAl empleado " + NC + " " + AP + " " + AM +"\n" +
                                 " que  trabaja en el Departamento de Gerencia\n" +
-                                " y que tiene una antigüedad de 7 años o más\n" +
+                                " y que tiene una antigüedad de 7 Anos o más\n" +
                                 " le corresponden 30 días de vacaciones.\n");
                     }
 
