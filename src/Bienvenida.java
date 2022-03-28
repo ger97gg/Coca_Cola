@@ -18,11 +18,11 @@ public class Bienvenida extends JFrame implements ActionListener {
         getContentPane().setBackground(new Color(255,0,0));
         //Diseño del titulo, imagen icono, background color.
         setTitle("Bienvenido");
-        ImageIcon imagenx = new ImageIcon(".\\src\\images\\icon.png");
+        ImageIcon imagenx = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\icon.png");
         setIconImage(imagenx.getImage());
 
         //El label del TITULO.
-        ImageIcon imagen = new ImageIcon(".\\src\\images\\logo-coca.png");
+        ImageIcon imagen = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\logo-coca.png");
         titulo = new JLabel(imagen);
         titulo.setBounds(25,15,300,150);
         add(titulo);

@@ -30,7 +30,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
 
         //icono
         setTitle("Pantalla Principal");
-        ImageIcon imagen = new ImageIcon(".\\src\\images\\icon.png");
+        ImageIcon imagen = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\icon.png");
         setIconImage(imagen.getImage());
 
         //recuperar nombre
@@ -80,7 +80,7 @@ public class principal extends JFrame implements ActionListener, ItemListener {
         creador.addActionListener(this);
 
         //labels
-        ImageIcon imagen2 = new ImageIcon(".\\src\\images\\historia1.png");
+        ImageIcon imagen2 = new ImageIcon("C:\\Users\\German Gamarra\\OneDrive\\Escritorio\\Curso EOI\\Coca_Cola\\src\\images\\historia1.png");
         e1 = new JLabel(imagen2);
         e1.setBounds(20,20,300,150);
         add(e1);
